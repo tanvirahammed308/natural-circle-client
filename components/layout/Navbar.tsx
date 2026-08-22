@@ -38,8 +38,8 @@ export function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Terra Harvest"
-            width={160}
-            height={50}
+            width={120}
+            height={40}
             className="h-11 w-auto object-contain"
             priority
           />
