@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces' });
 
 export const metadata: Metadata = {
-  title: 'Terra Harvest | Natural Organic Food',
+  title: ' Natural Circle',
   description: 'Farm-fresh, certified organic fruits, vegetables, grains, and pantry staples delivered to your door.',
   keywords: ['organic food', 'natural food', 'farm fresh', 'healthy eating'],
 };
