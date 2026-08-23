@@ -32,7 +32,7 @@ export function Navbar() {
             src="/images/logo.png"
             alt="Organic Market Logo"
             width={180}
-            height={60}
+            height={40}
             className="w-44 h-14 object-contain"
             priority
           />
