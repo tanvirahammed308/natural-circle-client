@@ -31,12 +31,12 @@ export function Navbar() {
           {/* Fixed-size wrapper + fill keeps the logo's own aspect ratio
               intact no matter what the source PNG's actual dimensions are —
               plain width/height props alone can stretch or clip it. */}
-          <div className="relative h-10 w-10">
+          <div className="relative h-12 w-12">
             <Image
               src="/images/logo.png"
               alt="Organic Market Logo"
               fill
-              sizes="40px"
+              sizes="48px"
               className="object-contain"
               priority
             />
