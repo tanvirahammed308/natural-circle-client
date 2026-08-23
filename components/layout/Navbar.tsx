@@ -27,13 +27,13 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-earth-100 bg-white/95 backdrop-blur dark:border-earth-800 dark:bg-earth-950/95">
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between">
-                <Link href="/" className="flex shrink-0 items-center">
+                        <Link href="/" className="flex shrink-0 items-center">
           <Image
             src="/images/logo.png"
             alt="Organic Market Logo"
-            width={120}
-            height={40}
-            className="w-32 h-10 object-contain"
+            width={180}
+            height={60}
+            className="w-44 h-14 object-contain"
             priority
           />
         </Link>
