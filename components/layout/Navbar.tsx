@@ -9,6 +9,7 @@ import { selectCartCount } from '@/store/slices/cartSlice';
 import { selectCurrentUser } from '@/store/slices/authSlice';
 import { toggleCart } from '@/store/slices/uiSlice';
 import { ThemeToggle } from '@/components/theme/ThemeToggle';
+import Image from 'next/image';
 
 const navLinks = [
   { href: '/products', label: 'Shop' },
@@ -28,8 +29,12 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-earth-100 bg-white/95 backdrop-blur dark:border-earth-800 dark:bg-earth-950/95">
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <FaLeaf className="h-6 w-6 text-organic-600 dark:text-organic-400" />
-          <span className="font-serif text-xl font-semibold text-earth-900 dark:text-earth-50">Terra Harvest</span>
+          <Image
+            src="/logo.png"
+            alt="Organic Market Logo"
+            width={40}
+            height={40}
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
