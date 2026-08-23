@@ -11,6 +11,7 @@ import { toggleCart } from '@/store/slices/uiSlice';
 import { ThemeToggle } from '@/components/theme/ThemeToggle';
 
 const navLinks = [
+  { href: '/', label: 'Home' },
   { href: '/products', label: 'Shop' },
   { href: '/products?category=vegetables', label: 'Vegetables' },
   { href: '/products?category=fruits', label: 'Fruits' },
