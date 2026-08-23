@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaLeaf } from 'react-icons/fa';
+import Image from 'next/image';
 import { FiShoppingCart, FiUser, FiMenu, FiX } from 'react-icons/fi';
 import { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
@@ -9,7 +9,6 @@ import { selectCartCount } from '@/store/slices/cartSlice';
 import { selectCurrentUser } from '@/store/slices/authSlice';
 import { toggleCart } from '@/store/slices/uiSlice';
 import { ThemeToggle } from '@/components/theme/ThemeToggle';
-import Image from 'next/image';
 
 const navLinks = [
   { href: '/products', label: 'Shop' },
@@ -28,13 +27,20 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-earth-100 bg-white/95 backdrop-blur dark:border-earth-800 dark:bg-earth-950/95">
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/images/logo.png"
-            alt="Organic Market Logo"
-            width={40}
-            height={40}
-          />
+        <Link href="/" className="flex shrink-0 items-center">
+          {/* Fixed-size wrapper + fill keeps the logo's own aspect ratio
+              intact no matter what the source PNG's actual dimensions are —
+              plain width/height props alone can stretch or clip it. */}
+          <div className="relative h-10 w-10">
+            <Image
+              src="/images/logo.png"
+              alt="Organic Market Logo"
+              fill
+              sizes="40px"
+              className="object-contain"
+              priority
+            />
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
