@@ -30,7 +30,7 @@ export function Navbar() {
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/public/images/logo.png"
+            src="/images/logo.png"
             alt="Organic Market Logo"
             width={40}
             height={40}
