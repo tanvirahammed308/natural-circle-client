@@ -52,7 +52,7 @@ export function Navbar() {
         scrolled ? 'shadow-sm shadow-earth-900/5' : 'shadow-none'
       )}
     >
-      {/* Slim announcement strip — sets the tone before anything else loads */}
+      {/* Slim announcement strip */}
       <div className="bg-organic-700 dark:bg-organic-900">
         <p className="container-px mx-auto max-w-7xl py-1.5 text-center text-[11px] font-medium tracking-wide text-organic-50">
           🌱 Free delivery on orders over $50 · Certified organic, always
@@ -60,8 +60,9 @@ export function Navbar() {
       </div>
 
       <div className="border-b border-earth-100 bg-white/90 backdrop-blur-md dark:border-earth-800 dark:bg-earth-950/90">
-        <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between gap-4">
-          <Link href="/" className="flex shrink-0 items-center">
+        <div className="container-px mx-auto grid h-16 max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
+          {/* Logo — left cell */}
+          <Link href="/" className="flex shrink-0 items-center justify-self-start">
             <Image
               src="/images/logo.png"
               alt="Organic Market Logo"
@@ -72,7 +73,8 @@ export function Navbar() {
             />
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:flex">
+          {/* Nav — truly centered middle cell, independent of logo/icon widths */}
+          <nav className="col-start-2 hidden items-center justify-center gap-7 lg:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -85,22 +87,22 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop search bar */}
-          <form onSubmit={handleSearch} className="hidden max-w-sm flex-1 md:flex">
-            <div className="group relative w-full">
-              <FiSearch className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-earth-400 transition-colors group-focus-within:text-organic-600 dark:text-earth-500 dark:group-focus-within:text-organic-400" />
-              <input
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search organic produce..."
-                aria-label="Search products"
-                className="w-full rounded-full border border-earth-200 bg-earth-50/70 py-2 pl-10 pr-4 text-sm text-earth-900 placeholder:text-earth-400 transition-all focus:border-organic-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-organic-100 dark:border-earth-700 dark:bg-earth-900/70 dark:text-earth-50 dark:placeholder:text-earth-500 dark:focus:bg-earth-900 dark:focus:ring-organic-950"
-              />
-            </div>
-          </form>
+          {/* Search + icons — right cell */}
+          <div className="col-start-3 flex items-center justify-end gap-2 sm:gap-3">
+            <form onSubmit={handleSearch} className="hidden max-w-[200px] flex-1 md:flex">
+              <div className="group relative w-full">
+                <FiSearch className="pointer-events-none absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-earth-400 transition-colors group-focus-within:text-organic-600 dark:text-earth-500 dark:group-focus-within:text-organic-400" />
+                <input
+                  type="text"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Search..."
+                  aria-label="Search products"
+                  className="w-full rounded-full border border-earth-200 bg-earth-50/70 py-1.5 pl-8 pr-3 text-xs text-earth-900 placeholder:text-earth-400 transition-all focus:border-organic-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-organic-100 dark:border-earth-700 dark:bg-earth-900/70 dark:text-earth-50 dark:placeholder:text-earth-500 dark:focus:bg-earth-900 dark:focus:ring-organic-950"
+                />
+              </div>
+            </form>
 
-          <div className="flex items-center gap-1 sm:gap-2">
             <button
               onClick={() => setMobileSearchOpen((v) => !v)}
               className="rounded-full p-2.5 text-earth-700 transition-colors hover:bg-earth-100 dark:text-earth-300 dark:hover:bg-earth-800 md:hidden"
