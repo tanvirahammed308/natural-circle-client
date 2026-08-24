@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { FaLeaf, FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
+import Image from 'next/image';
+import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 export function Footer() {
   return (
@@ -7,10 +8,14 @@ export function Footer() {
       <div className="container-px mx-auto max-w-7xl py-12">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2">
-              <FaLeaf className="h-6 w-6 text-organic-600 dark:text-organic-400" />
-              <span className="font-serif text-lg font-semibold text-earth-900 dark:text-earth-50">Terra Harvest</span>
-            </div>
+            <Image
+              src="/images/logo.png"
+              alt="Organic Market Logo"
+              width={180}
+              height={30}
+              className="h-14 w-44 object-contain"
+              priority
+            />
             <p className="mt-3 text-sm text-earth-600 dark:text-earth-400">
               Certified organic produce, sourced directly from trusted family farms.
             </p>
@@ -47,7 +52,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-10 border-t border-earth-200 pt-6 text-center text-xs text-earth-500 dark:border-earth-800 dark:text-earth-500">
-          © {new Date().getFullYear()} Terra Harvest. All rights reserved.
+          © {new Date().getFullYear()} Natural Circle. All rights reserved.
         </div>
       </div>
     </footer>
