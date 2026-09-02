@@ -62,8 +62,7 @@ const slides: Slide[] = [
 
 const AUTOPLAY_MS = 6000;
 
-// A tiny neutral blurred placeholder (not yellow) shown while each photo
-// is still downloading, so the gap reads as "loading" rather than "empty".
+
 const BLUR_PLACEHOLDER =
   'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjMiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjMiIGZpbGw9IiM0YzJlMjMiLz48L3N2Zz4=';
 
@@ -111,11 +110,11 @@ export function HeroSlider() {
 
   return (
     <section
-      className="relative isolate overflow-hidden bg-organic-950"
+      className="relative isolate overflow-hidden bg-[#385E25]"
       onMouseEnter={() => clearInterval(timerRef.current)}
       onMouseLeave={start}
     >
-      {/* Faint scattered leaf texture across the dark background */}
+      
       <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.06]">
         {Array.from({ length: 14 }).map((_, i) => (
           <FaLeaf
@@ -132,7 +131,7 @@ export function HeroSlider() {
       </div>
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)_56px]">
-        {/* Text column */}
+        
         <div className="container-px relative z-10 flex min-h-[22rem] flex-col justify-center py-16 lg:py-0">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
