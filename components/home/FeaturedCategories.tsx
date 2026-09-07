@@ -14,8 +14,7 @@ const categories = [
   { slug: 'dairy', label: 'Dairy', icon: GiMilkCarton },
   { slug: 'herbs', label: 'Herbs', icon: GiHerbsBundle },
   { slug: 'pantry', label: 'Pantry', icon: GiOlive },
-  { slug: 'pantry', label: 'Pantry', icon: GiOlive },
-  { slug: 'pantry', label: 'Pantry', icon: GiOlive },
+  
 ] as const;
 
 interface FeaturedCategoriesProps {

@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   title: ' Natural Circle',
   description: 'Farm-fresh, certified organic fruits, vegetables, grains, and pantry staples delivered to your door.',
   keywords: ['organic food', 'natural food', 'farm fresh', 'healthy eating'],
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 // Runs before hydration so the correct theme class is applied on first paint —

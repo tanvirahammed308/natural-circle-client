@@ -8,10 +8,12 @@ import authReducer from './slices/authSlice';
 import uiReducer from './slices/uiSlice';
 import alertReducer from './slices/alertSlice';
 import themeReducer from './slices/themeSlice';
+import productsSlice from './slices/productsSlice';
 
 const rootReducer = combineReducers({
   cart: cartReducer,
   auth: authReducer,
+  products: productsSlice,
   ui: uiReducer,
   alert: alertReducer,
   theme: themeReducer,
