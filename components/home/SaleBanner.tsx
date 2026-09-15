@@ -11,7 +11,7 @@ const SaleBanner = () => {
       <div
         className="
           group relative mx-auto flex
-          min-h-[520px]
+          min-h-[80px]
           w-full
           max-w-[1720px]
           flex-col
@@ -24,7 +24,7 @@ const SaleBanner = () => {
           shadow-xl
           sm:min-h-[560px]
           sm:rounded-[28px]
-          lg:min-h-[300px]
+          lg:min-h-[80px]
           lg:flex-row
         "
       >
@@ -105,7 +105,7 @@ const SaleBanner = () => {
           />
 
           {/* Desktop curved divider */}
-          <div
+          {/* <div
             className="
               absolute
               right-[-1px]
@@ -113,12 +113,12 @@ const SaleBanner = () => {
               z-20
               hidden
               h-[110%]
-              w-12
+              w-2
               rounded-[50%_0_0_50%]
-              bg-[#145f67]
+              bg-[#e3e6e6]
               lg:block
             "
-          />
+          /> */}
 
           {/* Discount Badge */}
           <div

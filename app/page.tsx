@@ -3,6 +3,7 @@ import { FeaturedCategories } from '@/components/home/FeaturedCategories';
 import { FlashSales } from '@/components/home/FlashSales';
 import { Product } from '@/types';
 import SaleBanner from '@/components/home/SaleBanner';
+import PromoCards from '@/components/home/PromoCards';
 
 async function getSaleProducts(): Promise<Product[]> {
   try {
@@ -30,6 +31,7 @@ export default async function HomePage() {
       <FeaturedCategories />
       <FlashSales products={saleProducts} />
       <SaleBanner />
+      <PromoCards/>
     </div>
   );
 }
